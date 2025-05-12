@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Comparte Umbras 2025!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>🎉 ¡Comparte tu experiencia en #Umbras2025! 🎉</h1>
+    <p>Usa este texto para tu publicación en Instagram o Story:</p>
+
+    <textarea id="shareText" rows="4" readonly>
+Pasándolo en grande en #Umbras2025 con @alterparadox 🦖🎲 ¡Nos vemos en las cavernas!
+    </textarea>
+
+    <button onclick="copyText()">📋 Copiar texto</button>
+
+    <a href="https://www.instagram.com/" target="_blank">
+      <button>📸 Abrir Instagram</button>
+    </a>
+
+    <!-- Si tienes un filtro de Instagram -->
+    <!--
+    <a href="https://www.instagram.com/ar/1234567890/" target="_blank">
+      <button>✨ Probar el filtro oficial</button>
+    </a>
+    -->
+  </main>
+
+  <script>
+    function copyText() {
+      const text = document.getElementById("shareText");
+      text.select();
+      text.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("¡Texto copiado! Ahora ve a Instagram para pegarlo.");
+    }
+  </script>
+</body>
+</html>
